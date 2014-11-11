@@ -43,24 +43,25 @@ for key in bars:
 
 	else: 
 		item={
-      		"type": "Feature",
-      		"geometry": {
-        		"type": "Point",
-        		"coordinates": [
+      			"type": "Feature",
+      			"geometry": {
+        			"type": "Point",
+        			"coordinates": [
           			longitude,
           			latitude
-        		]
-      		},
-      		"properties": {
-        		"marker-symbol": "bar",
-        		"name": bars[key]["Name"],
-        		"address": bars[key]["Address"],
-        		"day": bars[key]["Day"],
-        		"hours": bars[key]["Time"],
-        		"specials": bars[key]["Details"]
-      		}
-    	}
-    	resources.append(item)
+        			]
+      			},
+      			"properties": {
+        			"marker-symbol": "bar",
+        			"name": bars[key]["Name"],
+        			"address": bars[key]["Address"],
+        			"day": bars[key]["Day"],
+        			"hours": bars[key]["Time"],
+        			"specials": bars[key]["Details"],
+        			"Website":bars[key]["Website"]
+      			}
+    		}
+    		resources.append(item)
 
 geo={
 	"type":"FeatureCollection",
